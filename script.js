@@ -78,21 +78,21 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 });
 
 // Waitlist form dummy handler
-const waitlistForm = document.querySelector(".waitlist-form");
-const waitlistInput = waitlistForm?.querySelector("input[type='email']");
+//const waitlistForm = document.querySelector(".waitlist-form");
+//const waitlistInput = waitlistForm?.querySelector("input[type='email']");
 
-waitlistForm?.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const email = waitlistInput.value.trim();
+//waitlistForm?.addEventListener("submit", (e) => {
+//  e.preventDefault();
+  //const email = waitlistInput.value.trim();
 
-  if (!email || !email.includes("@")) {
-    alert("Voer een geldig e-mailadres in.");
-    return;
-  }
+  //if (!email || !email.includes("@")) {
+    //alert("Voer een geldig e-mailadres in.");
+    //return;
+  //}
 
-  alert(`Bedankt ${email}, je staat op de LiftLog wachtlijst!`);
-  waitlistInput.value = "";
-});
+  //alert(`Bedankt ${email}, je staat op de LiftLog wachtlijst!`);
+ // waitlistInput.value = "";
+//});
 
 // ---- AI block updater ----
 const aiLastSession = document.getElementById("ai-last-session");

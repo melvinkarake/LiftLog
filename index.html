@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiftLog – Progressive Overload Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <div class="logo">
+        <span class="logo-left">Lift</span><span class="logo-right">Log</span>
+      </div>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#calculator">Calculator</a>
+        <a href="#waitlist">Waitlist</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1>Stop guessing. Start progressing.</h1>
+          <p>LiftLog is een AI-assisted workout tracker die je helpt progressive overload automatisch en veilig op te bouwen, zodat jij je kan focussen op sterker worden.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary">Join Beta Waitlist</button>
+            <span class="hero-subtext">Gratis tijdens de vroege beta. AI-suggesties zijn nog een simpel prototype.</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Laatste workout</h3>
+          <p class="hero-lift-name">Barbell Squat</p>
+          <p class="hero-lift-stats">3 × 8 @ 80 kg</p>
+          <div class="hero-next">
+            <span>Volgende keer:</span>
+            <strong>3 × 8 @ 82.5 kg</strong>
+          </div>
+          <div class="hero-tag">+2.5 kg · Progressive overload</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <h2>Waarom LiftLog?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Helder overzicht</h3>
+            <p>Zie in één oogopslag welke oefeningen je sterker maken en waar je vastloopt.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚖️</div>
+            <h3>Slimme suggesties</h3>
+            <p>Automatische gewichtsaanpassingen op basis van je vorige sessies en reps.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3>Echte progressie</h3>
+            <p>Minimalistisch, donker design dat je motiveert om terug te komen en te loggen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="calculator" class="section section-alt">
+      <div class="container">
+        <h2>Progressive Overload Calculator</h2>
+        <p class="section-subtitle">Test hoe LiftLog je volgende gewicht zou voorstellen.</p>
+
+        <div class="calc-card">
+            <div class="ai-section">
+  <div class="ai-header">
+    <span class="ai-pill">Early AI Prototype</span>
+    <h3>AI-assisted recommendation (prototype)</h3>
+    <p>Op basis van je laatste sessie geeft LiftLog een eerste suggestie voor je volgende gewicht. Nu nog simpele logica, later een echt AI-model.</p>
+  </div>
+
+  <div class="ai-card">
+    <div class="ai-row">
+      <span class="ai-label">Laatste sessie</span>
+      <span class="ai-value" id="ai-last-session">3 × 8 @ 80 kg</span>
+    </div>
+    <div class="ai-row">
+      <span class="ai-label">AI suggestie</span>
+      <span class="ai-value accent" id="ai-suggestion">3 × 8 @ 82.5 kg</span>
+    </div>
+    <div class="ai-row ai-row-note">
+      <span class="ai-note" id="ai-note">
+        Dit is een eenvoudige prototype-berekening. In de volledige versie wordt dit gevoed door een echt model.
+      </span>
+    </div>
+  </div>
+</div>
+
+          <div class="calc-grid">
+            <div class="calc-field">
+              <label for="current-weight">Huidig gewicht (kg)</label>
+              <input type="number" id="current-weight" placeholder="Bijv. 80">
+            </div>
+            <div class="calc-field">
+              <label for="reps-completed">Reps voltooid</label>
+              <input type="number" id="reps-completed" placeholder="Bijv. 8">
+            </div>
+            <div class="calc-field">
+              <label for="target-reps">Target reps</label>
+              <input type="number" id="target-reps" placeholder="Bijv. 8" value="8">
+            </div>
+          </div>
+          <button id="calculate-btn" class="btn btn-secondary">Bereken volgend gewicht</button>
+
+          <div id="calc-result" class="calc-result hidden">
+            <h3>Volgende workout</h3>
+            <p class="calc-weight"></p>
+            <p class="calc-advice"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="waitlist" class="section">
+      <div class="container">
+        <h2>Early Access Waitlist</h2>
+        <p class="section-subtitle">Laat je e-mail achter om als eerste toegang te krijgen tot de beta.</p>
+        <form class="waitlist-form">
+          <input type="email" class="input" placeholder="jouw@email.be" required>
+          <button type="submit" class="btn btn-primary">Inschrijven</button>
+        </form>
+        <p class="waitlist-info">Geen spam. Alleen updates als er echt iets nieuws is.</p>
+      </div>
+    </section>
+  </main>
+
+ <footer class="footer">
+  <div class="container footer-inner">
+    <p>&copy; 2026 LiftLog – Made in Brussels 🇧🇪</p>
+    <p class="footer-note">Gebouwd voor lifters die serieus willen loggen.</p>
+    <p class="footer-note">
+      Built in Brussels by a 20-year-old dev learning in public. Volg de journey & geef feedback.
+    </p>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

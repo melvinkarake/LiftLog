@@ -113,3 +113,13 @@ function updateAiBlock(lastSessionText, suggestionText, noteText) {
   aiSuggestion.textContent = suggestionText;
   aiNoteEl.textContent = noteText;
 }
+
+// Scroll from pricing button to waitlist section
+const starterJoinBtn = document.getElementById("starter-join-waitlist");
+const waitlistSection = document.getElementById("waitlist");
+
+if (starterJoinBtn && waitlistSection) {
+  starterJoinBtn.addEventListener("click", () => {
+    waitlistSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
